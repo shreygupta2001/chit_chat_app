@@ -1,0 +1,19 @@
+.rooms_list {
+    display: flex;
+    height: 100%;
+    width: 150px;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    transition: 0.2s;
+    border-radius: 10px;
+}
+
+.rooms_list:hover {
+    background-color: #08475a;
+    opacity: 1;
+}
+
+.room {
+    background-color: #07617d;
+}

@@ -1,0 +1,18 @@
+.create_room_button {
+    border-radius: 25px;
+    font-size: 18px;
+    padding: 10px 10px;
+    width: 180px;
+    transition: 0.3s;
+    position: absolute;
+    left: 2px;
+    bottom: 21%;
+    background-color: #0e2b47;
+    color: #ececeb;
+    margin-left: 10px;
+}
+
+.create_room_button:hover {
+    background-color: #146680;
+    opacity: 1;
+}

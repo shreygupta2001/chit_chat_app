@@ -1,7 +1,6 @@
 import { callStates, setCallState, setGroupCallActive, setGroupCallIncomingStreams, clearGroupCallData } from "../../store/actions/callActions";
 import store from "../../store/store";
 import * as wss from '../webSocketConnection/webSocketConnection';
-import { getTurnServers } from "./turn";
 
 let myPeer;
 let myPeerId;

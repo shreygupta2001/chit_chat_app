@@ -15,7 +15,6 @@ import {
 } from "../../store/actions/callActions"
 import store from '../../store/store';
 import * as wss from '../webSocketConnection/webSocketConnection';
-import { getTurnServers } from "./turn";
 
 //possible answers to pre offer
 const preOfferAnswers = {

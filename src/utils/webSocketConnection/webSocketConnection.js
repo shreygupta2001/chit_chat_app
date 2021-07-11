@@ -133,17 +133,17 @@ const handleBroadcastEvents = (data) => {
         
         case broadcastEventTypes.ACTIVE_USERS:
             //filter to see only other users except ours in the list
-            const activeUsers = data.activeUsers.filter(activeUser => activeUser.socketId !== socket.id);
+            const activeUsers = data.activeUsers.filter((activeUser) => activeUser.socketId !== socket.id);
             store.dispatch(dashboardActions.setActiveUsers(activeUsers));
             break;
 
         //broadcast event related to group calls
         case broadcastEventTypes.GROUP_CALL_ROOMS:
-            const groupCallRooms = data.groupCallRooms.filter(room => room.socketId !== socket.id);
+            const groupCallRooms = data.groupCallRooms.filter((room) => room.socketId !== socket.id);
             const activeGroupCallRoomId = webRTCGroupCallHandler.checkActiveGroupCall();
 
             if (activeGroupCallRoomId) {
-                const room = groupCallRooms.find(room => room.roomId === activeGroupCallRoomId);
+                const room = groupCallRooms.find((room) => room.roomId === activeGroupCallRoomId);
 
                 if (!room) {
                     webRTCGroupCallHandler.clearGroupData();

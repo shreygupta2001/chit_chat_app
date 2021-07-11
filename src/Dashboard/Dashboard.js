@@ -29,7 +29,7 @@ const Dashboard = ({ username, callState }) => {
                 <div className='content_container '>
                     <DirectCall />
                     <GroupCall />
-                    {callState !== callStates.CALL_IN_PROGRESS && (<DashboardInformation username={username} />)}
+                    {callState !== callStates.CALL_IN_PROGRESS && <DashboardInformation username={username} />}
                 </div>
                 <div className='rooms_container background_secondary_color'>
                     <GroupCallRoomsList />

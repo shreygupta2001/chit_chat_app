@@ -88,7 +88,7 @@ export const leaveGroupCall = () => {
     if (groupCallHost) {
         wss.groupCallClosedByHost({
             peerId: myPeerId
-        })
+        });
     } else {
         wss.userLeftGroupCall({
             streamId: store.getState().call.localStream.id,
@@ -110,7 +110,7 @@ export const clearGroupData = () => {
     const localStream = store.getState().call.localStream;
     localStream.getVideoTracks()[0].enabled = true;
     localStream.getAudioTracks()[0].enabled = true;
-}
+};
 
 //function to remove an inactive stream on leaving group call
 export const removeInactiveStream = (data) => {
@@ -138,4 +138,4 @@ export const checkActiveGroupCall = () => {
     } else {
         return false;
     }
-}
+};

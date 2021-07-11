@@ -11,8 +11,8 @@ import {
     setRemoteStream,
     setScreenSharingActive,
     resetCallDataState,
-    setMessage,
-} from "../../store/actions/callActions"
+    setMessage
+} from '../../store/actions/callActions';
 import store from '../../store/store';
 import * as wss from '../webSocketConnection/webSocketConnection';
 

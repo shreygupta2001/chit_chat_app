@@ -19,17 +19,17 @@ import { setTurnServers } from '../utils/webRTC/turn';
 const Dashboard = ({ username, callState }) => {
 
     //getting local stream from webRTCHandler
-    useEffect(() => {
-        axios.get('https://chitchat-serverbackend.herokuapp.com/api/get-turn-credentials').then(
-            responseData => {
-                console.log(responseData);
-                setTurnServers(responseData.data.token.iceServers);
+    // useEffect(() => {
+    //     axios.get('https://chitchat-serverbackend.herokuapp.com/api/get-turn-credentials').then(
+    //         responseData => {
+    //             console.log(responseData);
+    //             setTurnServers(responseData.data.token.iceServers);
 
-            }
-        ).catch(err => {
-            console.log(err);
-        })
-    }, []);
+    //         }
+    //     ).catch(err => {
+    //         console.log(err);
+    //     })
+    // }, []);
     webRTCHandler.getLocalStream();
     webRTCGroupHandler.connectWithMyPeer();
 

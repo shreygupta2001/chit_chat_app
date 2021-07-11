@@ -10,8 +10,11 @@ let groupCallHost = false;
 
 export const connectWithMyPeer = () => {
     myPeer = new window.Peer(undefined, {
+        path: '/peerjs',
+        host: '/',
+        port: '5000',
         config: {
-            iceServers: [...getTurnServers(), {url: 'stun:stun.1und1.de:3478'}]
+            iceServers: [{ url: 'stun:stun.1und1.de:3478' }]
         }
     });
 
@@ -81,7 +84,7 @@ export const connectToNewUser = (data) => {
 
 //function to leave group call on pressing leave group call button
 export const leaveGroupCall = () => {
-    
+
     //if host ends the group call
     if (groupCallHost) {
         wss.groupCallClosedByHost({

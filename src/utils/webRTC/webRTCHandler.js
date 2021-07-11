@@ -32,6 +32,11 @@ const audioVideoConstraints = {
     audio: true
 };
 
+//configuration for webRTC connection
+const configuration = {
+    iceServers: [{ url: 'stun:stun.1und1.de:3478' }]
+};
+
 let connectedUserSocketId;
 let peerConnection;
 let dataChannel;
@@ -52,14 +57,6 @@ export const getLocalStream = () => {
 
 //function to create new peer connection using webRTC
 const createPeerConnection = () => {
-    const turnServers = getTurnServers();
-    
-    //configuration for webRTC connection
-    const configuration = {
-        iceServers: [...turnServers, { url: 'stun:stun.1und1.de:3478' }],
-        iceTransportPolicy: 'relay'
-    };
-
     peerConnection = new RTCPeerConnection(configuration);
 
     const localStream = store.getState().call.localStream;

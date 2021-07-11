@@ -24,13 +24,14 @@ const Dashboard = ({ username, callState }) => {
             responseData => {
                 console.log(responseData);
                 setTurnServers(responseData.data.token.iceServers);
-                webRTCHandler.getLocalStream();
-                webRTCGroupHandler.connectWithMyPeer();
+
             }
         ).catch(err => {
             console.log(err);
         })
     }, []);
+    webRTCHandler.getLocalStream();
+    webRTCGroupHandler.connectWithMyPeer();
 
     // divisions on the main Dashboard
     return (

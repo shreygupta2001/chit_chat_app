@@ -19,7 +19,7 @@ const styles = {
         height: '30px',
         fill: '#ececeb'
     }
-}
+};
 
 const ConversationButtons = (props) => {
 

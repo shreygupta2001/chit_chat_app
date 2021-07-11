@@ -27,7 +27,7 @@ const CallingDialog = () => {
 
     const handleHangUpButtonPressed = () => {
         hangUp();
-    }
+    };
 
     return (
         <div className='call_dialog background_secondary_color'>

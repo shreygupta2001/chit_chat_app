@@ -6,7 +6,7 @@ import mainpic from '../resources/mainpic.png';
 import './Dashboard.css';
 import ActiveUsersList from './components/ActiveUsersList/ActiveUsersList';
 import * as webRTCHandler from '../utils/webRTC/webRTCHandler';
-import * as webRTCGroupHandler from '../utils/webRTC//webRTCGroupCallHandler';
+import * as webRTCGroupHandler from '../utils/webRTC/webRTCGroupCallHandler';
 import DirectCall from './components/DirectCall/DirectCall';
 import DashboardInformation from './components/DashboardInformation/DashboardInformation';
 import { connect } from 'react-redux';

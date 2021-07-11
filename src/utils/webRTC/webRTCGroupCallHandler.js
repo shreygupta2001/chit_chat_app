@@ -8,14 +8,7 @@ let groupCallRoomId;
 let groupCallHost = false;
 
 export const connectWithMyPeer = () => {
-    myPeer = new window.Peer(undefined, {
-        path: '/peerjs',
-        host: '/',
-        port: '5000',
-        config: {
-            iceServers: [{ url: 'stun:stun.1und1.de:3478' }]
-        }
-    });
+    myPeer = new window.Peer();
 
     myPeer.on('open', (id) => {
         console.log('successfully connected with peer server');
